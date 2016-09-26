@@ -392,7 +392,7 @@ function heightRange(name, object){
 	else {
 		var splitA = name.split("'");
 		var heightA = (parseInt(splitA[0])*12) + parseInt(splitA[1]);
-		var heightB = heightA + 1;
+		var heightB = heightA;
 	}
 	if (heightA > -1 && heightB > 0){
 		var personHeight = object.filter(
