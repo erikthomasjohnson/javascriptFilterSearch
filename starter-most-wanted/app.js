@@ -268,7 +268,9 @@ var dataObject = getPersonAge();
 function initSearch(){
 	var fName = prompt(
 		"Retreive Database Information: \n" +
-		"          Next Of Kin: (Name) \n" +
+		"          Descendants \n" +
+		"          Immediate Family           (Name)\n" +
+		"          Next Of Kin \n" +
 		"\n" +
 		"Separate multiple parameters with ('comma'): \n" +
 		"          Last Name: (Last Name) \n" +
@@ -312,6 +314,8 @@ function firstNameData(fName){
 		}
 	var auntUncle = sortAge(getChildren(grandParents, grandParentsChild.firstName));
 	var familyList = displayNextOfKin(subject, spouse, children, parents, siblings, grandChildren, grandParents, nieceNephew, auntUncle, fName);
+	var descendants = displayDescendants(subject, spouse, children, grandChildren, fName);
+	var immediateFamily = displayImmediateFamily(subject, spouse, children, parents, siblings, fName);
 	// responder(subject);
 	// responder(parents);
 	// responder(grandParents);
@@ -319,6 +323,8 @@ function firstNameData(fName){
 	// responder(children);
 	// responder(grandChildren);
 	// responder(searchObject)
+	responder(descendants);
+	responder(immediateFamily);
 	responder(familyList);
 }
 function parameterData(fName, object){
@@ -476,11 +482,43 @@ function getNameList(subject, name){
 	}
 	else{ return ["----------No Data For: " + name + "----------"]}
 }
+function displayImmediateFamily(subject, spouse, children, parents, siblings, fName){
+	var tempObject = [{"{{'''':''''}:''*****No Information to Display*****" : {"":""}}];
+	var newObject = [{"{{'''':''''}:''*****No Information to Display*****" : {"":""}}];
+	var index = 0;
+	tempObject[index++] = getNameList(subject, "IMMEDIATE FAMILY ----- for:");
+	tempObject[index++] = getNameList(spouse, "SPOUSE");
+	tempObject[index++] = getNameList(children, "CHILDREN");
+	tempObject[index++] = getNameList(parents, "PARENTS");
+	tempObject[index++] = getNameList(siblings, "SIBLINGS");
+	index = 0;
+	for (var item in tempObject){
+		for (var value in tempObject[item]){
+			newObject[index++] = tempObject[item][value];
+		}
+	}
+	return newObject;
+}
+function displayDescendants(subject, spouse, children, grandChildren, fName){
+	var tempObject = [{"{{'''':''''}:''*****No Information to Display*****" : {"":""}}];
+	var newObject = [{"{{'''':''''}:''*****No Information to Display*****" : {"":""}}];
+	var index = 0;
+	tempObject[index++] = getNameList(subject, "DESCENDANTS ----- for:");
+	tempObject[index++] = getNameList(children, "CHILDREN");
+	tempObject[index++] = getNameList(grandChildren, "GRANDCHILDREN");
+	index = 0;
+	for (var item in tempObject){
+		for (var value in tempObject[item]){
+			newObject[index++] = tempObject[item][value];
+		}
+	}
+	return newObject;
+}
 function displayNextOfKin(subject, spouse, children, parents, siblings, grandChildren, grandParents, nieceNephew, auntUncle, fName){
 	var tempObject = [{"{{'''':''''}:''*****No Information to Display*****" : {"":""}}];
 	var newObject = [{"{{'''':''''}:''*****No Information to Display*****" : {"":""}}];
 	var index = 0;
-	tempObject[index++] = getNameList(subject, "NAME");
+	tempObject[index++] = getNameList(subject, "NEXT OF KIN ----- for:");
 	tempObject[index++] = getNameList(spouse, "SPOUSE");
 	tempObject[index++] = getNameList(children, "CHILDREN");
 	tempObject[index++] = getNameList(parents, "PARENTS");
