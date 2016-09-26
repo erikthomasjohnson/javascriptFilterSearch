@@ -1,9 +1,9 @@
-var dataObject = [{ 
+var originalDataObject = [{ 
 		"id":	"272822514",
 	  "firstName": "Billy",
 	  "lastName": "Bob",
 	  "gender": "male",
-	  "dob": "1/18/1949",
+	  "dob": "01/18/1949",
 	  "height": 71,
 	  "weight": 175,
 	  "eyeColor": "brown",
@@ -15,7 +15,7 @@ var dataObject = [{
 	  "firstName": "Uma",
 	  "lastName": "Bob",
 	  "gender": "female",
-	  "dob": "4/1/1947",
+	  "dob": "04/01/1947",
 	  "height": 65,
 	  "weight": 162,
 	  "eyeColor": "brown",
@@ -27,7 +27,7 @@ var dataObject = [{
 	  "firstName": "Michael",
 	  "lastName": "Walkens",
 	  "gender": "male",
-	  "dob": "5/9/1951",
+	  "dob": "05/09/1951",
 	  "height": 76,
 	  "weight": 250,
 	  "eyeColor": "brown",
@@ -39,7 +39,7 @@ var dataObject = [{
 	  "firstName": "Jon",
 	  "lastName": "Walkens",
 	  "gender": "male",
-	  "dob": "9/6/1945",
+	  "dob": "09/06/1945",
 	  "height": 62,
 	  "weight": 115,
 	  "eyeColor": "brown",
@@ -51,7 +51,7 @@ var dataObject = [{
 	  "firstName": "Jack",
 	  "lastName": "Pafoy",
 	  "gender": "male",
-	  "dob": "3/16/1938",
+	  "dob": "03/16/1938",
 	  "height": 70,
 	  "weight": 207,
 	  "eyeColor": "black",
@@ -63,7 +63,7 @@ var dataObject = [{
 	  "firstName": "Jen",
 	  "lastName": "Pafoy",
 	  "gender": "female",
-	  "dob": "4/10/1940",
+	  "dob": "04/10/1940",
 	  "height": 72,
 	  "weight": 256,
 	  "eyeColor": "black",
@@ -99,7 +99,7 @@ var dataObject = [{
 	  "firstName": "Joy",
 	  "lastName": "Madden",
 	  "gender": "female",
-	  "dob": "4/20/1939",
+	  "dob": "04/20/1939",
 	  "height": 69,
 	  "weight": 199,
 	  "eyeColor": "hazel",
@@ -111,7 +111,7 @@ var dataObject = [{
 	  "firstName": "Mader",
 	  "lastName": "Madden",
 	  "gender": "male",
-	  "dob": "5/6/1937",
+	  "dob": "05/06/1937",
 	  "height": 76,
 	  "weight": 205,
 	  "eyeColor": "black",
@@ -123,7 +123,7 @@ var dataObject = [{
 	  "firstName": "Jill",
 	  "lastName": "Pafoy",
 	  "gender": "Bob",
-	  "dob": "2/8/1972",
+	  "dob": "02/08/1972",
 	  "height": 74,
 	  "weight": 118,
 	  "eyeColor": "brown",
@@ -159,7 +159,7 @@ var dataObject = [{
 	  "firstName": "Annie",
 	  "lastName": "Pafoy",
 	  "gender": "female",
-	  "dob": "11/4/1970",
+	  "dob": "11/04/1970",
 	  "height": 62,
 	  "weight": 235,
 	  "eyeColor": "hazel",
@@ -171,7 +171,7 @@ var dataObject = [{
 	  "firstName": "Dave",
 	  "lastName": "Pafoy",
 	  "gender": "male",
-	  "dob": "8/5/1967",
+	  "dob": "08/05/1967",
 	  "height": 61,
 	  "weight": 112,
 	  "eyeColor": "green",
@@ -183,7 +183,7 @@ var dataObject = [{
 	  "firstName": "Amii",
 	  "lastName": "Pafoy",
 	  "gender": "female",
-	  "dob": "3/13/1963",
+	  "dob": "03/13/1963",
 	  "height": 74,
 	  "weight": 184,
 	  "eyeColor": "brown",
@@ -195,7 +195,7 @@ var dataObject = [{
 	  "firstName": "Regina",
 	  "lastName": "Madden",
 	  "gender": "female",
-	  "dob": "7/26/1959",
+	  "dob": "07/26/1959",
 	  "height": 71,
 	  "weight": 249,
 	  "eyeColor": "brown",
@@ -207,7 +207,7 @@ var dataObject = [{
 	  "firstName": "Hana",
 	  "lastName": "Madden",
 	  "gender": "female",
-	  "dob": "10/7/1953",
+	  "dob": "10/07/1953",
 	  "height": 70,
 	  "weight": 187,
 	  "eyeColor": "brown",
@@ -231,7 +231,7 @@ var dataObject = [{
 	  "firstName": "Mattias",
 	  "lastName": "Madden",
 	  "gender": "male",
-	  "dob": "2/19/1966",
+	  "dob": "02/19/1966",
 	  "height": 70,
 	  "weight": 110,
 	  "eyeColor": "blue",
@@ -243,7 +243,7 @@ var dataObject = [{
 	  "firstName": "Ellen",
 	  "lastName": "Madden",
 	  "gender": "female",
-	  "dob": "2/19/1970",
+	  "dob": "02/19/1970",
 	  "height": 67,
 	  "weight": 100,
 	  "eyeColor": "blue",
@@ -255,7 +255,7 @@ var dataObject = [{
 	  "firstName": "Joey",
 	  "lastName": "Madden",
 	  "gender": "female",
-	  "dob": "2/02/1987",
+	  "dob": "02/02/1987",
 	  "height": 67,
 	  "weight": 100,
 	  "eyeColor": "blue",
@@ -264,47 +264,198 @@ var dataObject = [{
 	  "currentSpouse": null 
 	}
 ];
-
-/*  Remove this from your final submission
-function printAllToConsole(dataObj){
-	for (var key in dataObj) {
-		if (dataObj.hasOwnProperty(key)) {
-			console.log(key + " -> " + JSON.stringify(dataObj[key]));
-		}
+var dataObject = getPersonAge();
+function initSearch(){
+	var fName = prompt(
+		"Retreive Database Information: \n" +
+		"          Next Of Kin: (Name) \n" +
+		"\n" +
+		"Separate multiple parameters with ('comma'): \n" +
+		"          Last Name: (Last Name) \n" +
+		"          Gender: (male or female) \n" +
+		"          DOB: (mm/dd/yyyy) \n" + 
+		"          Eye Color: (color) \n" +
+		"          Occupation: (ex. doctor) \n" +
+		"          Age: (##); Age Range (##-##) \n" +  
+		"          Weight: (##lbs); Weight Range (##lbs-##lbs) \n" +  
+		"          Height: (#'##''); Height Range (#'##''-#'##'')"
+		);
+	var fNameSplit = fName.split(" ")
+	var fNameLower = fNameSplit[0].toLowerCase();
+	var fNameSplitA = (fNameLower.charAt(0).toUpperCase() + fNameLower.slice(1));
+	if (isName(fNameSplitA)){
+		fName = fNameSplitA;
+		firstNameData(fName)
+	}
+	else{
+		multipleFilter(fName);
 	}
 }
-printAllToConsole(dataObject);
-*/
-
-function initSearch(){
-	var fName = prompt("First Name, Gender, DOB, Height, Weight, Eye Color, or Occupation: ");
-	if (isName(fName)){
-		var lName = displayObject(fName)[0].lastName; // prompt("Last Name: ");
-	}
-	var searchObject = displayObject(fName);
-	var subject = getPersonInfo( fName, lName);
+function responder(results){
+	alert(JSON.stringify(results, null, "\n"));
+}
+function firstNameData(fName){
+	var lName = displayObject(fName)[0].lastName; // prompt("Last Name: ");
+	var subject = addObject(fName);
 	var spouse = getSpouse(subject);
-	var children = getChildren(subject, fName);
-	var parents = getParents(subject);
-	var siblings = getChildren(parents, fName);
-	var grandChildren = getChildren(children, fName)
-	var grandParents = getParents(parents);
-	var nieceNephew = getChildren(siblings, fName)
-	var auntUncle = getChildren(grandParents, fName)
-	var family = getFamily(fName, lName);
-	var familyList = nextOfKin(subject, spouse, children, parents, siblings, grandChildren, grandParents, nieceNephew, auntUncle, fName);
+	var children = sortAge(getChildren(subject, fName));
+	var parents = sortAge(getParents(subject));
+	var siblings = sortAge(getChildren(parents, fName));
+	var grandChildren = sortAge(getChildren(children, fName));
+	var grandParents = sortAge(getParents(parents));
+	var nieceNephew = sortAge(getChildren(siblings, fName));
+	var grandParentsChild = parents[0];
+		if (parents[0].id > 0){
+			if (parents[0].parents[0] == grandParents[0].id || parents[0].parents[0] == grandParents[1].id){
+			grandParentsChild = parents[0];}
+			else{grandParentsChild = parents[1];}
+		}
+	var auntUncle = sortAge(getChildren(grandParents, grandParentsChild.firstName));
+	var familyList = displayNextOfKin(subject, spouse, children, parents, siblings, grandChildren, grandParents, nieceNephew, auntUncle, fName);
 	// responder(subject);
 	// responder(parents);
 	// responder(grandParents);
 	// responder(siblings);
 	// responder(children);
-	// responder(family);
 	// responder(grandChildren);
 	// responder(searchObject)
 	responder(familyList);
 }
-function responder(results){
-	alert(JSON.stringify(results));
+function parameterData(fName, object){
+	var nameSplit = fName.split("-");
+	if (fName.search("lbs") > 0){
+		return weightRange(fName, object);
+	}
+	else if (fName.search("'") > 0){
+		return heightRange(fName, object);
+	}
+	else if (parseInt(nameSplit[0]) > 0){
+		return ageRange(fName, object);
+	}
+	else {return addObject(fName, object);}
+}
+function multipleFilter(name){
+	var newObject = [{"{{'''':''''}:''*****No Information to Display*****" : {"":""}}];
+	name = name.replace(/\s+/g, "");
+	var parameterArray = name.split(",");
+	for (var i = 0; i < parameterArray.length; i++){
+		if (i > 0){
+		newObject[i] = parameterData(parameterArray[i], newObject[i - 1]);
+		}
+		else {
+		newObject[0] = parameterData(parameterArray[0]);
+		}
+	}
+	newObject = newObject[newObject.length - 1];
+	if (name.search("-") <= 0 && name.search("'") <= 0 && name.search("lbs") <= 0){
+		if (parseInt(name) > 0){name = "Age: " + name;}
+	}
+	if (name == ""){newObject = dataObject;}
+	responder(displayObject(name, newObject));
+}
+function weightRange(name, object){
+	if (object == undefined){object = dataObject;}
+	var weight = name.replace(/"lbs"+/g, "");
+	if (name.search("-") > 0){
+		var nameSplit = name.split("-");
+		var splitA = parseInt(nameSplit[0]);
+		var splitB = parseInt(nameSplit[1]);
+		if (splitA > splitB){var splitC = splitB; splitB = splitA; splitA = splitC;}
+	}
+	else {
+		var splitA = parseInt(name);
+		var splitB = splitA;
+	}
+	if (splitA > -1 && splitB > 0){
+		var personWeight = object.filter(
+			function (el) {return el.weight >= splitA && el.weight <= splitB});
+			return personWeight;
+	}
+	else{return undefined;}
+}
+function heightRange(name, object){
+	if (object == undefined){object = dataObject;}
+	if (name.search("-") > 0){
+		var nameSplit = name.split("-");
+		var splitA = nameSplit[0].split("'");
+		var splitB = nameSplit[1].split("'");
+		var heightA = (parseInt(splitA[0])*12) + parseInt(splitA[1]);
+		var heightB = (parseInt(splitB[0])*12) + parseInt(splitB[1]);
+		if (heightA > heightB){var heightC = heightB; heightB = heightA; heightA = heightC;}
+	}
+	else {
+		var splitA = name.split("'");
+		var heightA = (parseInt(splitA[0])*12) + parseInt(splitA[1]);
+		var heightB = heightA + 1;
+	}
+	if (heightA > -1 && heightB > 0){
+		var personHeight = object.filter(
+			function (el) {return el.height >= heightA && el.height <= heightB});
+			return personHeight;
+	}
+	else{return undefined;}
+}
+function ageRange(name, object){
+	if (object == undefined){object = dataObject;}
+	if (name.search("-") > 0){
+		var nameSplit = name.split("-");
+		var splitA = parseInt(nameSplit[0]);
+		var splitB = parseInt(nameSplit[1]);
+		if (splitA > splitB){var splitC = splitB; splitB = splitA; splitA = splitC;}
+	}
+	else {
+		var splitA = parseInt(name);
+		var splitB = splitA + 1;
+	}
+	if (splitA > -1 && splitB > 0){
+		var personAge = object.filter(
+			function (el) {return el.age >= splitA && el.age <= splitB});
+			return personAge;
+	}
+	else{return undefined;}
+}
+function getPersonAge(){
+	index = 0;
+	i = 0;
+	var personObject = {"{{'''':''''}:''*****No Information to Display*****" : {"":""}};
+	var newObject = [{"{{'''':''''}:''*****No Information to Display*****" : {"":""}}];
+	for(var key in originalDataObject){
+		var year = 2016
+		var month = Math.round((9/13)*100)/100;
+		var day = Math.round((26/32)*100)/10000;
+		var currentDate = (year + month + day)*10000;
+		var personAge = Math.round(currentDate - (getDOB(originalDataObject[key])))/10000;
+		personObject = originalDataObject[key];
+		personObject["age"] = personAge;
+		newObject[index++] = personObject;
+	}
+	newObject = sortAge(newObject);
+	return newObject;
+}
+function sortAge(object){
+	var sortObject = [{"{{'''':''''}:''*****No Information to Display*****" : {"":""}}];
+	var newObject = [{"{{'''':''''}:''*****No Information to Display*****" : {"":""}}];
+	var index = 0;
+	for (var key in object){
+		if (object[key].id > 0){
+			sortObject[getDOB(object[key])] = object[key];
+		}
+	}
+	//sortObject.reverse();
+	for (var age in sortObject){
+		if (sortObject[age].id > 0){
+			newObject[index++] = sortObject[age];
+		}
+	}
+	return newObject;
+}
+function getDOB(object){
+	var dobArray = object.dob.split("/");
+	var ageYear = (parseFloat(dobArray[2]));
+	var ageMonth = Math.round((parseFloat(dobArray[0])/13)*100)/100;
+	var ageDay = Math.round((parseFloat(dobArray[1])/32)*100)/10000;
+	var age = Math.round((ageYear + ageMonth + ageDay)*10000);
+	return age;
 }
 function isName(name){
 	for (var i = 0; i < dataObject.length; i++){
@@ -314,74 +465,55 @@ function isName(name){
 	}
 	return false;
 }
-function displayObject(name){
-var subject = addObject(name);
-var newObject = [{"{{'''':''''}:''*****No Information to Display*****" : {"":""}}];
-var index = 0;
-if (subject[0].id > 0){ newObject[index++] = "Search Parameter: " + name.toUpperCase() + " ";
-for (var i = 0; i < subject.length; i++){
-	newObject[index++] = subject[i].firstName + "_" + subject[i].lastName + " ";}}
-return newObject;
-}
-function nextOfKin(subject, spouse, children, parents, siblings, grandChildren, grandParents, nieceNephew, auntUncle, fName){
-var newObject = [{"{{'''':''''}:''*****No Information to Display*****" : {"":""}}];
-var index = 0;
-	if (isName(fName) == true){
-		if (subject[0].id > 0){ newObject[index++] = "NAME";
-		newObject[index++] = " " + subject[0].firstName + "_" + subject[0].lastName;}
-		if (spouse[0].id > 0){ newObject[index++] = "     SPOUSE";
-		newObject[index++] = " " + spouse[0].firstName + "_" + spouse[0].lastName;}
-		if (children[0].id > 0){ newObject[index++] = "     CHILDREN";
-		for (var i = 0; i < children.length; i++){
-			newObject[index++] = " " + children[i].firstName + "_" + children[i].lastName;}}
-		if (parents[0].id > 0){ newObject[index++] = "     PARENTS";
-		for (var i = 0; i < parents.length; i++){
-			newObject[index++] = " " + parents[i].firstName + "_" + parents[i].lastName;}}
-		if (siblings[0].id > 0){ newObject[index++] = "     SIBLINGS";
-		for (var i = 0; i < siblings.length; i++){
-			newObject[index++] = " " + siblings[i].firstName + "_" + siblings[i].lastName;}}
-		if (grandChildren[0].id > 0){ newObject[index++] = "     GRANDCHILDREN";
-		for (var i = 0; i < grandChildren.length; i++){
-			newObject[index++] = " " + grandChildren[i].firstName + "_" + grandChildren[i].lastName;}}
-		if (grandParents[0].id > 0){ newObject[index++] = "     GRANDPARENTS";
-		for (var i = 0; i < grandParents.length; i++){
-			newObject[index++] = " " + grandParents[i].firstName + "_" + grandParents[i].lastName;}}
-		if (nieceNephew[0].id > 0){ newObject[index++] = "     NIECE/NEPHEW";
-		for (var i = 0; i < nieceNephew.length; i++){
-			newObject[index++] = " " + nieceNephew[i].firstName + "_" + nieceNephew[i].lastName;}}
-		if (auntUncle[0].id > 0){ newObject[index++] = "     AUNT/UNCLE";
-		for (var i = 0; i < auntUncle.length; i++){
-			newObject[index++] = " " + auntUncle[i].firstName + "_" + auntUncle[i].lastName;}}
-		return newObject;
+function getNameList(subject, name){
+	var newObject = [{"{{'''':''''}:''*****No Information to Display*****" : {"":""}}];
+	var index = 0;
+	if (subject[0].id > 0){ newObject[index++] = name;
+	for (var i = 0; i < subject.length; i++){
+		newObject[index++] = "          " + subject[i].firstName + " " + subject[i].lastName + "          ";
+		newObject[index++] = "GENDER: " + subject[i].gender + "     DOB: " + subject[i].dob + "     HEIGHT: " + subject[i].height + "     WEIGHT: " + subject[i].weight + "     EYE_COLOR: " + subject[i].eyeColor + "     OCCUPATION: " + subject[i].occupation + "     AGE: " + subject[i].age;}
+	return newObject;
 	}
-	else{
-		return displayObject(fName)
-	}
+	else{ return ["----------No Data For: " + name + "----------"]}
 }
-function getPersonInfo(firstname, lastname){
-	var subject = addObject(firstname);
-	return subject;
+function displayNextOfKin(subject, spouse, children, parents, siblings, grandChildren, grandParents, nieceNephew, auntUncle, fName){
+	var tempObject = [{"{{'''':''''}:''*****No Information to Display*****" : {"":""}}];
+	var newObject = [{"{{'''':''''}:''*****No Information to Display*****" : {"":""}}];
+	var index = 0;
+	tempObject[index++] = getNameList(subject, "NAME");
+	tempObject[index++] = getNameList(spouse, "SPOUSE");
+	tempObject[index++] = getNameList(children, "CHILDREN");
+	tempObject[index++] = getNameList(parents, "PARENTS");
+	tempObject[index++] = getNameList(siblings, "SIBLINGS");
+	tempObject[index++] = getNameList(grandChildren, "GRANDCHILDREN");
+	tempObject[index++] = getNameList(grandParents, "GRANDPARENTS");
+	tempObject[index++] = getNameList(nieceNephew, "NIECE/NEPHEW");
+	tempObject[index++] = getNameList(auntUncle, "AUNT/UNCLE");
+	index = 0;
+	for (var item in tempObject){
+		for (var value in tempObject[item]){
+			newObject[index++] = tempObject[item][value];
+		}
+	}
+	return newObject;
+}
+function displayObject(name, subject){
+	var newObject = [{"{{'''':''''}:''*****No Information to Display*****" : {"":""}}];
+	var index = 0;
+	if (subject == undefined || subject[0] == undefined){subject = addObject(name);}
+	if (subject.toString().length < 1){subject = newObject;}
+	newObject = getNameList(subject, "Search Parameter: " + name.toUpperCase());
+	return newObject;
 }
 function getSpouse(subject){
-var newObject = [{"{{'''':''''}:''*****No Information to Display*****" : {"":""}}];
-var spouseId = subject[0].currentSpouse;
+	var newObject = [{"{{'''':''''}:''*****No Information to Display*****" : {"":""}}];
+	var spouseId = subject[0].currentSpouse;
 	if (spouseId != null){
 		var spouse = addObject(spouseId);
 		spouse = removeObject(spouse, subject[0].firstName);
 		return spouse;
 	}
 	return newObject;
-}
-function getFamily(firstname, lastname){
-try {
-	var tempFamily = addObject(lastname);
-	var family = removeObject(tempFamily, firstname);
-	return family;
-	}
-	catch (error) {
-		console.log(error.message);
-		return;
-	}
 }
 function getChildren(subject, name){
 	var index = 0;
@@ -417,10 +549,13 @@ function getParents(subject){
 		if (subject == undefined){subject = newObject;}
 		if (subject.length > 0){
 			for (var ii = 0; ii < subject.length; ii++){
-				if (subject[ii].parents == undefined){subject[ii].parents = newObject;}
-				for (var i = 0; i < subject[ii].parents.length; i++){
-					number = subject[0].parents[i];
-						newObject[i] = addObject(number)[i];
+				if (subject[ii].parents.length != undefined || subject[ii].parents.length > 0){
+					for (var i = 0; i < subject[ii].parents.length; i++){
+						number = subject[ii].parents[i];
+						if (number > 0){
+							newObject[i] = addObject(number)[i];
+						}
+					}
 				}
 			}
 			return newObject;
@@ -431,15 +566,16 @@ function getParents(subject){
 		return newObject;
 	}
 }
-function addObject(name){
+function addObject(name, object){
 	var i = 0;
 	var newObject = [{"{{'''':''''}:''*****No Information to Display*****" : {"":""}}];
-	for (var key in dataObject) {
-		if (dataObject.hasOwnProperty(key)) {
-			for (var value in dataObject[key]){
-				if (dataObject[key].hasOwnProperty(value)){
-					if (dataObject[key][value] == name){
-						newObject[i++] = dataObject[key];
+	if (object == undefined){object = dataObject;}
+	for (var key in object) {
+		if (object.hasOwnProperty(key)) {
+			for (var value in object[key]){
+				if (object[key].hasOwnProperty(value)){
+					if (object[key][value] == name){
+						newObject[i++] = object[key];
 					}
 				}
 			}
