@@ -313,8 +313,9 @@ function firstNameData(fName){
 			else{grandParentsChild = parents[1];}
 		}
 	var auntUncle = sortAge(getChildren(grandParents, grandParentsChild.firstName));
+	var recursiveChildren = sortAge(getChildrenRecursively(subject, fName));
 	var familyList = displayNextOfKin(subject, spouse, children, parents, siblings, grandChildren, grandParents, nieceNephew, auntUncle, fName);
-	var descendants = displayDescendants(subject, spouse, children, grandChildren, fName);
+	var descendants = displayDescendants(subject, spouse, children, grandChildren, recursiveChildren, fName);
 	var immediateFamily = displayImmediateFamily(subject, spouse, children, parents, siblings, fName);
 	// responder(subject);
 	// responder(parents);
@@ -499,13 +500,14 @@ function displayImmediateFamily(subject, spouse, children, parents, siblings, fN
 	}
 	return newObject;
 }
-function displayDescendants(subject, spouse, children, grandChildren, fName){
+function displayDescendants(subject, spouse, children, grandChildren, recursiveChildren, fName){
 	var tempObject = [{"{{'''':''''}:''*****No Information to Display*****" : {"":""}}];
 	var newObject = [{"{{'''':''''}:''*****No Information to Display*****" : {"":""}}];
 	var index = 0;
 	tempObject[index++] = getNameList(subject, "DESCENDANTS ----- for:");
 	tempObject[index++] = getNameList(children, "CHILDREN");
 	tempObject[index++] = getNameList(grandChildren, "GRANDCHILDREN");
+	tempObject[index++] = getNameList(recursiveChildren, "RECURSIVE CHILDREN");
 	index = 0;
 	for (var item in tempObject){
 		for (var value in tempObject[item]){
@@ -572,6 +574,35 @@ function getChildren(subject, name){
 			}
 			newObject = removeDuplicate(newObject);
 			newObject = removeObject(newObject, name);
+			return newObject;
+		}
+	}
+	catch (error) {
+		console.log(error.message);
+		return newObject;
+	}
+}
+function getChildrenRecursively(subject, name){
+	var index = 0;
+	var newObject = [{"{{'''':''''}:''*****No Information to Display*****" : {"":""}}];
+	var number = 0;
+	try {
+		if (subject == undefined){subject = newObject;}
+		if (subject.length > 0){
+			for (var i = 0; i < subject.length; i++){
+				newObject[i] = subject[i];
+				number = subject[i].id;
+				for (var key in dataObject) {
+					if (dataObject.hasOwnProperty(key)) {
+						if ((number > 0) && ((dataObject[key].parents[0] == number) || (dataObject[key].parents[1] == number))){
+							newObject[subject.length + index++] = dataObject[key];
+						}
+					}
+				}
+			}
+			newObject = removeDuplicate(newObject);
+			newObject = removeObject(newObject, name);
+			if (newObject.length != subject.length){return getChildrenRecursively(newObject, name);}
 			return newObject;
 		}
 	}
